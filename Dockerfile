@@ -13,7 +13,7 @@ RUN pip install --upgrade pip
 RUN pip install Flask
 
 #RUN pip install -r requirements.txt
-
+EXPOSE 50000
 COPY . /app
 
 ENTRYPOINT [ "python" ]
