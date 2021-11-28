@@ -1,18 +1,18 @@
-FROM ubuntu:latest
+FROM python:latest
 
 
-RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev
+#RUN apt-get update -y && \
+#    apt-get install -y python-pip python-dev
 
 # We copy just the requirements.txt first to leverage Docker cache
-COPY ./requirements.txt /app/requirements.txt
+#COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
 RUN pip install --upgrade pip
 RUN pip install Flask
 
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 COPY . /app
 
